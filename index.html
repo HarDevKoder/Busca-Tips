@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,29 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="imagenes/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
-  
-
-
+  <div class="contenedorGeneral">
+    <div class="contenedorCabecera">
+      <h1>Buscador de Tips</h1>
+      <hr />
+    </div>
+    <div class="contenedorCategorias">
+      <p>Selecciona Lenguaje: </p>
+      <select id="selectorCategorias">
+        <option value="json/git.json">Git</option>
+        <option value="json/html.json">Html</option>
+        <option value="json/css.json">Css</option>
+        <option value="json/javascript.json">JavaScript</option>
+      </select>
+    </div>
+    <div class="contenedorBuscador">
+      <input type="text" placeholder="Ingresa Búsqueda">
+      <button>Buscar</button>
+    </div>
+    <div class="contenedorResultados"></div>
+  </div>
   <script src="js/script.js"></script>
 </body>
+
 </html>

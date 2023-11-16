@@ -1,0 +1,74 @@
+@font-face {
+  font-family: "miFuente";
+  src: url("../fuentes/arial.ttf");
+}
+html {
+  font-family: miFuente;
+}
+body {
+  background: Azure;
+}
+.contenedorGeneral {
+  width: 40%;
+  height: auto;
+  border: 1px solid silver;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: lightblue;
+  border-radius: 5px;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3), 3px 0px 3px rgba(0, 0, 0, 0.3);
+
+}
+.contenedorCabecera {
+  padding-top: 20px;
+  height: 50px;
+  text-align: center;
+}
+h1 {
+  margin: 0;
+  padding: 0;
+}
+hr {
+  width: 90%;
+  font-weight: bold;
+  border: 3px solid green;
+}
+.contenedorCategorias {
+  height: 40px;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 1.2em;
+}
+.contenedorBuscador {
+  height: 40px;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+input{
+  text-align: center;
+  font-size: 1.2em;
+}
+button{
+  font-size: 1.2em;
+  border: 1px solid rgb(83, 81, 81);
+  background: rgb(194, 193, 193);
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover{
+  background: rgb(146, 145, 145);
+}
+
+.contenedorResultados {
+  background-color: burlywood;
+}

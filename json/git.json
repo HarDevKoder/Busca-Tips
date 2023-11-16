@@ -1,0 +1,8 @@
+{
+  "data":[
+    {
+      "tip":"cambiar mensaje del ultimo commit",
+      "codigo":"1. git commit --amend\\n2.Se abre el editor de texto\\n3. Minimizar la Terminal ( Ctrl + J )\\n4. Modificar el Mensaje\\n5. Cerrar el editor (ctrl + c  y luego  :wq)\\n6. git log --oneline\\n7. git push -f"
+    }
+  ]
+}
