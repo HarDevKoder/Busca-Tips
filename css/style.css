@@ -19,7 +19,6 @@ body {
   background-color: lightblue;
   border-radius: 5px;
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3), 3px 0px 3px rgba(0, 0, 0, 0.3);
-
 }
 .contenedorCabecera {
   padding-top: 20px;
@@ -52,11 +51,11 @@ hr {
   align-items: center;
 }
 
-input{
+input {
   text-align: center;
   font-size: 1.2em;
 }
-button{
+button {
   font-size: 1.2em;
   border: 1px solid rgb(83, 81, 81);
   background: rgb(194, 193, 193);
@@ -65,10 +64,44 @@ button{
   cursor: pointer;
 }
 
-button:hover{
+button:hover {
   background: rgb(146, 145, 145);
 }
 
 .contenedorResultados {
   background-color: burlywood;
+}
+
+@media (max-width: 600px) {
+  .contenedorGeneral {
+    width: 93%;
+    gap: 15px;
+    padding: 0 5px;
+  }
+
+  select {
+    border: 1px solid black;
+    border-radius: 0;
+    color: black;
+    font-weight: 600;
+  }
+
+  p {
+    color: black;
+    font-weight: 600;
+  }
+
+  input {
+    font-size: 1.2em;
+    font-weight: 600;
+    width: 65%;
+    text-align: left;
+  }
+
+  button {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: black;
+    padding: 7px;
+  }
 }
