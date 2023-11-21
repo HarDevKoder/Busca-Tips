@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Busca Tips</title>
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/inputGoogle.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="imagenes/favicon.ico" type="image/x-icon">
 </head>
@@ -26,9 +27,15 @@
       </select>
     </div>
     <div class="contenedorBuscador">
-      <input type="text" placeholder="Ingresa Búsqueda" id="txtDatoBuscado">
+
+      <label class="label">
+        <input type="text" placeholder="" id="txtDatoBuscado" class="input">
+        <span class="span">Ingresa Búsqueda</span>
+      </label>
+
       <button id="btnBuscar">Buscar</button>
     </div>
+
     <div class="contenedorResultados" id="contenedorResultados"></div>
   </div>
   <script type="module" src="js/script.js"></script>

@@ -36,7 +36,6 @@ hr {
 }
 .contenedorCategorias {
   height: 40px;
-  /* border: 1px solid black; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,15 +45,11 @@ hr {
 .contenedorBuscador {
   height: 40px;
   display: flex;
-  gap: 5px;
+  gap: 15px;
   justify-content: center;
   align-items: center;
 }
 
-input {
-  text-align: center;
-  font-size: 1.2em;
-}
 button {
   font-size: 1.2em;
   border: 1px solid rgb(83, 81, 81);
@@ -89,13 +84,6 @@ button:hover {
   p {
     color: black;
     font-weight: 600;
-  }
-
-  input {
-    font-size: 1.2em;
-    font-weight: 600;
-    width: 65%;
-    text-align: left;
   }
 
   button {

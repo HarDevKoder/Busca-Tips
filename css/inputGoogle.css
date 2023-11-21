@@ -1,0 +1,42 @@
+label {
+  display: grid;
+  width: 200px;
+  padding: 3px 10px;
+  font-size: 1.2em;
+  grid-template-areas: "input";
+
+  > * {
+    grid-area: input;
+  }
+}
+
+.span {
+  transform-origin: left;
+  transition: transfom 0.5s color 0.5s;
+}
+
+.input {
+  background: transparent;
+  height: 100%;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid green;
+  font: inherit;
+  border-radius: 0px;
+  padding-left: 2px;
+
+  &:focus + .span,
+  &:not(:placeholder-shown) + .span {
+    color: green;
+    transform: translate(0, -100%) scale(1);
+  }
+}
+
+/* Ajuste para Mobile */
+@media (max-width: 600px) {
+  input {
+    height: 40%;
+    border-radius: 0px;
+    padding-left: 2px;
+  }
+}
