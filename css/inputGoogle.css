@@ -2,7 +2,7 @@ label {
   display: grid;
   width: 200px;
   padding: 3px 10px;
-  font-size: 1.2em;
+  font-size: 1em;
   grid-template-areas: "input";
 
   > * {
@@ -28,13 +28,13 @@ label {
   &:focus + .span,
   &:not(:placeholder-shown) + .span {
     color: green;
-    transform: translate(0, -100%) scale(1);
+    transform: translate(0, -100%) scale(0.8);
   }
 }
 
 /* Ajuste para Mobile */
 @media (max-width: 600px) {
-  input {
+  .input {
     height: 40%;
     border-radius: 0px;
     padding-left: 2px;
