@@ -69,10 +69,19 @@ button:hover {
 
 @media (max-width: 600px) {
   .contenedorGeneral {
-    width: 93%;
-    gap: 15px;
+    width: 90%;
+    gap: 10px;
     padding: 0 5px;
   }
+
+  .contenedorBuscador {
+  border: 1px solid red;
+  height: 80px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items:center;
+}
 
   select {
     border: 1px solid black;
@@ -84,6 +93,7 @@ button:hover {
   p {
     color: black;
     font-weight: 600;
+    font-size: 0.9em;
   }
 
   button {
