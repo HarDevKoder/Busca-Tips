@@ -7,6 +7,7 @@ html {
 }
 body {
   background: Azure;
+  font-size: 1em;
 }
 .contenedorGeneral {
   width: 30%;
@@ -75,7 +76,6 @@ button:hover {
   }
 
   .contenedorBuscador {
-  border: 1px solid red;
   height: 80px;
   display: flex;
   gap: 10px;
