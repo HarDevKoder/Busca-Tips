@@ -1,4 +1,8 @@
-// Permitir: A-Z, backspace, espacio
+// -------------------------------------------------------------------------------
+// LIBRERIA DE FUNCIONES A UTILIZAR EN EL PROYECTO
+// -------------------------------------------------------------------------------
+// Validacion Entrada datos (Permitir: A-Z, backspace, espacio)
+// -------------------------------------------------------------------------------
 export const validarDatoInput = (event) =>{
   const txtDatoBuscado = document.getElementById('txtDatoBuscado');
   let regex = /^[a-z\s]$/i;
@@ -7,4 +11,8 @@ export const validarDatoInput = (event) =>{
     event.preventDefault();
   }
 }
+
+// -------------------------------------------------------------------------------
+// 
+// -------------------------------------------------------------------------------
 

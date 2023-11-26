@@ -6,7 +6,6 @@ html {
   font-family: miFuente;
 }
 body {
-  background: Azure;
   font-size: 1em;
 }
 .contenedorGeneral {
@@ -33,7 +32,7 @@ h1 {
 hr {
   width: 90%;
   font-weight: bold;
-  border: 3px solid green;
+  border: 2px solid green;
 }
 .contenedorCategorias {
   height: 40px;
@@ -50,6 +49,20 @@ hr {
   justify-content: center;
   align-items: center;
 }
+.label{
+  display: grid;
+  place-items: center;
+  height: 50px;
+}
+
+.input{
+  height: fit-content;
+}
+
+.span{
+  padding: 0 5px;
+}
+
 
 button {
   font-size: 1.2em;
@@ -101,5 +114,9 @@ button:hover {
     font-weight: 600;
     color: black;
     padding: 7px;
+  }
+
+  .input{
+    padding: 0 13px;
   }
 }
