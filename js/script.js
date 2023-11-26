@@ -1,17 +1,27 @@
-// referencia a los objetos de DOM
-const selectorCategorias = document.getElementById('selectorCategorias');
-const btnBuscar = document.getElementById('btnBuscar');
-const contenedorResultados = document.getElementById('contenedorResultados');
+// Importacion de Funciones;
+import {
+  referenciarElementosDom,
+  cargarArchivoCategoria,
+  validarDatoInput
+} from "./libreria.js";
 
-// Importacion de Funciones de la libreria
-import { validarDatoInput  } from "./libreria.js";
-
-
-// Variables globales\
+// Variables Globales
+//Archivo inicial del select
+let archivoSeleccionado = "json/git.json"; 
 
 
 // PROGRAMA PRINCIPAL
+// Referencio Elementos del DOM
+referenciarElementosDom();
 
-// Valido la entrada de datos (solo texto, espacio y backspace)
-txtDatoBuscado.addEventListener('keydown', validarDatoInput);
+// Selecciono Archivo para extraer Tips
+selectorCategorias.addEventListener("change", ()=>{
+    archivoSeleccionado = cargarArchivoCategoria();
+});
 
+// Evito ingreso de numeros y caracteres especiales al input
+txtBusqueda.addEventListener('keydown', validarDatoInput);
+
+btnBuscar.addEventListener('click',()=>{
+  alert(archivoSeleccionado);
+})
