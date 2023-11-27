@@ -11,6 +11,8 @@ export const referenciarElementosDom = () => {
   const btnBuscar = document.getElementById("btnBuscar");
 
   const contenedorResultados = document.getElementById("contenedorResultados");
+
+  const listaResultados = document.getElementById('listaResultados');
 };
 
 // -----------------------------------------------------------------------
@@ -34,3 +36,14 @@ export const validarDatoInput = (event) => {
     event.preventDefault();
   }
 };
+
+// -----------------------------------------------------------------------
+// Extraccion de los valores completos del JSON selecionado
+// -----------------------------------------------------------------------
+export const extraerDatoCompletoJson = (url, callback) =>{
+  fetch(url)
+    .then(res => res.json())
+    .then((salida)=>{
+      callback(salida);
+    })
+}

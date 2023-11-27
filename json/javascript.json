@@ -1,0 +1,7 @@
+{
+  "data": 
+  [
+    { "nombre": "juan javascript", "edad": 24 },
+    { "nombre": "pedro javascript", "edad": 33 }
+  ]
+}
