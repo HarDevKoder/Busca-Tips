@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 @font-face {
   font-family: "miFuente";
   src: url("../fuentes/arial.ttf");
@@ -9,72 +12,45 @@ body {
   font-size: 1em;
 }
 .contenedorGeneral {
-  width: 30%;
+  width: fit-content;
   height: auto;
   border: 1px solid silver;
   margin: 30px auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  background-color: lightblue;
-  border-radius: 5px;
-  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3), 3px 0px 3px rgba(0, 0, 0, 0.3);
-}
-.contenedorCabecera {
-  padding-top: 20px;
-  height: 50px;
-  text-align: center;
-}
-h1 {
-  margin: 0;
-  padding: 0;
-}
-hr {
-  width: 90%;
-  font-weight: bold;
-  border: 2px solid green;
-}
-.contenedorCategorias {
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  font-size: 1.2em;
-}
-.contenedorBuscador {
-  height: 40px;
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  align-items: center;
-}
-.label{
   display: grid;
   place-items: center;
-  height: 50px;
+  gap: 15px;
+  background-color: #e7e7e7;
+  border-radius: 5px;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3), 3px 0px 3px rgba(0, 0, 0, 0.3);
+  padding: 10px;
 }
 
-.input{
-  height: fit-content;
-}
-
-.span{
+.legend {
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: center;
   padding: 0 5px;
 }
 
-
-button {
-  font-size: 1.2em;
-  border: 1px solid rgb(83, 81, 81);
-  background: rgb(194, 193, 193);
+.fieldset {
+  border: 1.5px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
   border-radius: 5px;
-  font-weight: 600;
-  cursor: pointer;
+  width: 100%;
+}
+.fieldset > * {
+  flex: 1;
+}
+.lblLenguaje {
+  text-align: right;
+  font-weight: bold;
 }
 
-button:hover {
-  background: rgb(146, 145, 145);
+.selectorCategorias {
+  height: 25px;
 }
 
 .contenedorResultados {
@@ -83,40 +59,10 @@ button:hover {
 }
 
 @media (max-width: 600px) {
-  .contenedorGeneral {
-    width: 90%;
-    gap: 10px;
-  }
-
-  .contenedorBuscador {
-  height: 80px;
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  align-items:center;
-}
-
   select {
     border: 1px solid black;
     border-radius: 0;
     color: black;
     font-weight: 600;
-  }
-
-  p {
-    color: black;
-    font-weight: 600;
-    font-size: 0.9em;
-  }
-
-  button {
-    font-size: 1.2em;
-    font-weight: 600;
-    color: black;
-    padding: 7px;
-  }
-
-  .input{
-    padding: 0 13px;
   }
 }

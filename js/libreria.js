@@ -5,13 +5,7 @@
 // -----------------------------------------------------------------------
 export const referenciarElementosDom = () => {
   const selectorCategorias = document.getElementById("selectorCategorias");
-
-  const txtBusqueda = document.getElementById("txtBusqueda");
-
-  const btnBuscar = document.getElementById("btnBuscar");
-
   const contenedorResultados = document.getElementById("contenedorResultados");
-
   const listaResultados = document.getElementById('listaResultados');
 };
 
@@ -19,9 +13,6 @@ export const referenciarElementosDom = () => {
 // Mensaje de confirmación de Categoria seleccionada
 // -----------------------------------------------------------------------
 export const cargarArchivoCategoria = () => {
-    alert(
-      `Los Tips de ${event.target.selectedOptions[0].text}\nhan sido Cargados!`
-    );
     let archivoSeleccionado = selectorCategorias.value;
     return archivoSeleccionado;
 };

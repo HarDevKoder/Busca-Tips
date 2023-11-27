@@ -13,33 +13,22 @@
 
 <body>
   <div class="contenedorGeneral">
-    <div class="contenedorCabecera">
-      <h1>Buscador de Tips</h1>
-      <hr />
-    </div>
-    <div class="contenedorCategorias">
-      <p>Lenguaje: </p>
-      <select id="selectorCategorias">
+
+    <fieldset class="fieldset">
+      <legend class="legend">Buscador de Tips</legend>
+      <p class="lblLenguaje">Lenguaje: </p>
+      <select id="selectorCategorias" class="selectorCategorias">
         <option value="json/git.json">Git</option>
         <option value="json/html.json">Html</option>
         <option value="json/css.json">Css</option>
         <option value="json/javascript.json">JavaScript</option>
       </select>
-    </div>
-    <div class="contenedorBuscador">
-
-      <label class="label">
-        <input type="text" class="input" id="txtBusqueda" placeholder=" " autocomplete="off">
-        <span class="span">Ingresa Busqueda</span>
-      </label>
-
-      <button id="btnBuscar">Buscar</button>
-    </div>
+    </fieldset>
 
     <div class="contenedorResultados" id="contenedorResultados">
       <ul id="listaResultados"></ul>
     </div>
-    
+
   </div>
   <script type="module" src="js/script.js"></script>
 </body>

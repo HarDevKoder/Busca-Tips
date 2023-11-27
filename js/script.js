@@ -29,13 +29,13 @@ btnBuscar.addEventListener("click", () => {
   if (txtBusqueda.value.trim() !== "") {
     extraerDatoCompletoJson(archivoSeleccionado, (salida) => {
       salida.data.forEach((item) => {
-        if (item.nombre.startsWith(txtBusqueda.value.toLowerCase())) {
+        if (item.titulo.startsWith(txtBusqueda.value.toLowerCase())) {
           let li = document.createElement("li");
-          li.innerHTML = item.nombre;
+          li.innerHTML = item.titulo;
           listaResultados.appendChild(li);
         }
       });
-      txtBusqueda.value = "";
+      // txtBusqueda.value = "";
     });
     listaResultados.style.display = "block";
   }else{

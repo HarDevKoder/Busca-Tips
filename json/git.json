@@ -1,7 +1,9 @@
 {
   "data": 
   [
-    {"nombre": "pedro gomez", "edad":20},
-    {"nombre": "pedro gil","edad":35}
+    {"titulo": "cambiar mensaje del último commit", 
+    "pasos":"* git commit --amend * Se abre el editor de texto * Minimizar la Terminal ( Ctrl + J ) * Modificar el Mensaje * Cerrar el editor (ctrl + c  y luego  :wq) * Verificar Cambios (git log --oneline) * git push -f"},
+
+    {"titulo": "crear Repositorio Local","pasos":"* git init"}
   ]
 }
