@@ -25,28 +25,27 @@ const validarCaracteresInput = (event) => {
 
 // Función que realiza la búsqueda
 const buscar = () => {
-  listaResultados.innerHTML = '';
+  listaResultados.innerHTML = "";
   fetch(archivo)
-    .then(res => res.json())
+    .then((res) => res.json())
     .then((salida) => {
       for (let item of salida.data) {
-        if (item.nombre.startsWith(inputBusqueda.value.toUpperCase())) {
-
-          let p = document.createElement('p');
-          // p.id = item.nombre;
+        if (item.titulo.startsWith(inputBusqueda.value.toUpperCase())) {
+          let p = document.createElement("p");
+          // p.id = item.titulo;
           p.innerHTML = item.sinopsis;
-          p.style.display = 'none';
+          p.style.display = "none";
 
-          let li = document.createElement('li');
-          li.innerHTML = item.nombre;
-          li.style.listStyle = 'none';
+          let li = document.createElement("li");
+          li.innerHTML = item.titulo;
+          li.style.listStyle = "none";
 
-          li.addEventListener('mouseover', () => {
-            p.style.display = 'block';
-          })
+          li.addEventListener("mouseover", () => {
+            p.style.display = "block";
+          });
 
-          li.addEventListener('mouseleave', () => {
-            p.style.display = 'none';
+          li.addEventListener("mouseleave", () => {
+            p.style.display = "none";
           });
 
           li.appendChild(p);
@@ -55,13 +54,11 @@ const buscar = () => {
       }
     })
     .catch((error) => alert(error));
-}
-
-
+};
 
 // PROGRAMA PRINCIPAL
 
 // Escuchadores de Eventos
 selectCategorias.addEventListener("change", mensajeSeleccionCategoria);
 inputBusqueda.addEventListener("keydown", validarCaracteresInput);
-btnBuscar.addEventListener('click', buscar);
+btnBuscar.addEventListener("click", buscar);

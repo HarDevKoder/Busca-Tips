@@ -18,17 +18,6 @@ export const cargarArchivoCategoria = () => {
 };
 
 // -----------------------------------------------------------------------
-// Validacion Entrada datos (Permitir: A-Z, backspace, espacio)
-// -----------------------------------------------------------------------
-export const validarDatoInput = (event) => {
-  let regex = /^[a-z\s]$/i;
-  if (event.key === "Backspace" || regex.test(event.key)) {
-  } else {
-    event.preventDefault();
-  }
-};
-
-// -----------------------------------------------------------------------
 // Extraccion de los valores completos del JSON selecionado
 // -----------------------------------------------------------------------
 export const extraerDatoCompletoJson = (url, callback) =>{
@@ -38,3 +27,9 @@ export const extraerDatoCompletoJson = (url, callback) =>{
       callback(salida);
     })
 }
+
+// -----------------------------------------------------------------------
+// 
+// -----------------------------------------------------------------------
+
+

@@ -1,7 +1,12 @@
 {
-  "data": 
-  [
-    { "nombre": "juan html", "edad": 28 },
-    { "nombre": "pedro html", "edad": 37 }
+  "data": [
+    { "titulo": "Anclas", "edad": 28 },
+    { "titulo": "Audio", "edad": 37 },
+    { "titulo": "Autofoco, Autocompletado", "edad": 28 },
+    { "titulo": "Chat Whatsapp", "edad": 28 },
+    { "titulo": "Descargar Archivo", "edad": 28 },
+    { "titulo": "FieldSet - Legend", "edad": 28 },
+    { "titulo": "Formulario", "edad": 28 },
+    { "titulo": "Tablas", "edad": 28 }
   ]
 }

@@ -3,13 +3,14 @@
 }
 @font-face {
   font-family: "miFuente";
-  src: url("../fuentes/arial.ttf");
+  src: url("../fuentes/roboto.ttf");
 }
 html {
   font-family: miFuente;
 }
 body {
   font-size: 1em;
+  background-color: rgb(236, 198, 214);
 }
 .contenedorGeneral {
   width: fit-content;
@@ -51,11 +52,20 @@ body {
 
 .selectorCategorias {
   height: 25px;
+  background: transparent;
 }
 
 .contenedorResultados {
   background-color: burlywood;
   width: 100%;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+.listaResultados {
+  list-style-position: inside;
+  padding: 10px;
+  margin: 0;
 }
 
 @media (max-width: 600px) {

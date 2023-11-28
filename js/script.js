@@ -2,7 +2,6 @@
 import {
   referenciarElementosDom,
   cargarArchivoCategoria,
-  validarDatoInput,
   extraerDatoCompletoJson,
 } from "./libreria.js";
 
@@ -12,33 +11,26 @@ let archivoSeleccionado = "json/git.json";
 
 // ----------------------------------------------------------------------
 // PROGRAMA PRINCIPAL
-listaResultados.style.display= 'none';
+// ----------------------------------------------------------------------
+listaResultados.style.display = "none";
+
 // Referencio Elementos del DOM
 referenciarElementosDom();
 
 // Selecciono Archivo para extraer Tips
 selectorCategorias.addEventListener("change", () => {
-  archivoSeleccionado = cargarArchivoCategoria();
-});
-
-// Evito ingreso de numeros y caracteres especiales al input
-txtBusqueda.addEventListener("keydown", validarDatoInput);
-
-btnBuscar.addEventListener("click", () => {
   listaResultados.innerHTML = " ";
-  if (txtBusqueda.value.trim() !== "") {
+  listaResultados.style.display = "block";
+  archivoSeleccionado = cargarArchivoCategoria();
+  if (archivoSeleccionado === "json/Seleccionar.json"){
+    document.location.reload();
+  }else{
     extraerDatoCompletoJson(archivoSeleccionado, (salida) => {
       salida.data.forEach((item) => {
-        if (item.titulo.startsWith(txtBusqueda.value.toLowerCase())) {
-          let li = document.createElement("li");
-          li.innerHTML = item.titulo;
-          listaResultados.appendChild(li);
-        }
+        let li = document.createElement("li");
+        li.innerHTML = item.titulo;
+        listaResultados.appendChild(li);
       });
-      // txtBusqueda.value = "";
     });
-    listaResultados.style.display = "block";
-  }else{
-    listaResultados.style.display = "none";
   }
 });

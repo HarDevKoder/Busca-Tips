@@ -1,7 +1,13 @@
 {
-  "data": 
-  [
-    { "nombre": "juan css", "edad": 23 },
-    { "nombre": "pedro css", "edad": 32 }
+  "data": [
+    { "titulo": "Agregar Fuente", "edad": 23 },
+    { "titulo": "Ancho Fijo Hijos en Padre", "edad": 32 },
+    { "titulo": "Iconos Fuentes", "edad": 32 },
+    { "titulo": "Imagen de Fondo", "edad": 32 },
+    { "titulo": "Input Efecto Google", "edad": 32 },
+    { "titulo": "Ocupar Alto Pantalla", "edad": 32 },
+    { "titulo": "Quitar Spinner Input Numérico", "edad": 32 },
+    { "titulo": "Texto Tridimensional", "edad": 32 },
+    { "titulo": "Viñetas dentro de Div", "edad": 32 }
   ]
 }
