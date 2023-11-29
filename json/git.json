@@ -2,8 +2,8 @@
   "data": 
   [
     {"titulo": "Cambiar mensaje del último commit", 
-    "pasos":"* git commit --amend * Se abre el editor de texto * Minimizar la Terminal ( Ctrl + J ) * Modificar el Mensaje * Cerrar el editor (ctrl + c  y luego  :wq) * Verificar Cambios (git log --oneline) * git push -f"},
+    "link":"https://www.notion.so/Cambiar-Mensaje-del-ltimo-Commit-7e491062559848859de335980e6a7708?pvs=4"},
 
-    {"titulo": "Crear Repositorio Local","pasos":"* git init"}
+    {"titulo": "Crear Repositorio Local","link":""}
   ]
 }

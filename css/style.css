@@ -66,6 +66,7 @@ body {
   list-style-position: inside;
   padding: 10px;
   margin: 0;
+  display: none;
 }
 
 @media (max-width: 600px) {
