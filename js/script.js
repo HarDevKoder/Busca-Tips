@@ -23,7 +23,7 @@ selectorCategorias.addEventListener("change", () => {
   listaResultados.style.display = "block";
   archivoSeleccionado = cargarArchivoCategoria();
   if (archivoSeleccionado === "json/Seleccionar.json"){
-    document.location.reload();
+    listaResultados.style.display = "none";;
   }else{
     extraerDatoCompletoJson(archivoSeleccionado, (salida) => {
       salida.data.forEach((item) => {
