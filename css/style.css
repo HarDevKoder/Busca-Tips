@@ -69,6 +69,17 @@ body {
   display: none;
 }
 
+.modal{
+  width:fit-content;
+  padding:20px;
+  background-Color:#ddd;
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
 @media (max-width: 600px) {
   select {
     border: 1px solid black;
@@ -76,4 +87,39 @@ body {
     color: black;
     font-weight: 600;
   }
+
+  .modal{
+    width:fit-content;
+    position: fixed;
+    border: 1px solid silver;
+    border-radius: 10px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .btnCerrar{
+    position: absolute;
+    top: 0;
+    right:0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border: none;
+  }
+
+
+
+
+
+
+
+
+
+
 }

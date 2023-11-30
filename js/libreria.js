@@ -39,3 +39,30 @@ export const origenCargaPagina = () => {
     document.location.reload();
   }
 };
+
+// -----------------------------------------------------------------------
+// Ventana Modal para Mostrar Tips
+// -----------------------------------------------------------------------
+export const customAlert = (tip) => {
+  // Venana modal contenedora
+  let modal = document.createElement("div");
+  modal.classList.add("modal");
+
+  // Parrafo para escribir el Tip
+  let text = document.createElement("p");
+  text.innerText = tip;
+  
+  // Boton de cierre de ventana Modal
+  let btnCerrar = document.createElement("button");
+  btnCerrar.classList.add("btnCerrar");
+  btnCerrar.textContent = "X";
+  btnCerrar.addEventListener("click", () => {
+    modal.remove();
+  });
+
+  // Agrego elementos a ventana modal
+  modal.append(text, btnCerrar);
+
+  // Agrego ventana modal al body de la página
+  document.body.appendChild(modal);
+};

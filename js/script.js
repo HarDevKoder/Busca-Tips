@@ -1,10 +1,10 @@
-
 // Importacion de Funciones;
 import {
   referenciarElementosDom,
   cargarArchivoCategoria,
   extraerDatoCompletoJson,
-  origenCargaPagina
+  origenCargaPagina,
+  customAlert
 } from "./libreria.js";
 
 // Origen de la carga de la pagina (inicial o retroceso)
@@ -32,13 +32,15 @@ selectorCategorias.addEventListener("change", () => {
       listaResultados.style.display = "block";
       salida.data.forEach((item) => {
         let li = document.createElement("li");
-        let a = document.createElement("a");
-        a.textContent = item.titulo;
-        a.href = item.link;
-        a.style.textDecoration = 'none';
-        a.style.color = 'Black';
-        a.style.fontWeight = 'Black';
-        li.appendChild(a);
+        li.textContent = item.titulo;
+        li.style.cursor = "pointer";
+        li.addEventListener("click", () => {
+          let elemento = "";
+          item.pasos.forEach((paso) => {
+            elemento += paso + "\n";
+          });
+          customAlert(elemento);
+        });
         listaResultados.appendChild(li);
       });
     });
