@@ -1,7 +1,7 @@
 {
   "data": [
     {
-      "titulo": "Cambiar mensaje del último commit",
+      "titulo": "Cambiar mensaje último commit",
       "pasos": [
         "1- git commit --amend",
         "2- Se abre el editor de texto",

@@ -33,7 +33,7 @@ body {
   padding: 0 5px;
 }
 
-.fieldset {
+.fieldSet {
   border: 1.5px solid black;
   display: flex;
   justify-content: center;
@@ -52,7 +52,7 @@ body {
 
 .selectorCategorias {
   height: 25px;
-  background: transparent;
+  background-color: #e7e7e7;;
 }
 
 .contenedorResultados {
@@ -69,57 +69,47 @@ body {
   display: none;
 }
 
-.modal{
-  width:fit-content;
-  padding:20px;
-  background-Color:#ddd;
-  position:fixed;
-  top:50%;
-  left:50%;
+.modal {
+  width: fit-content;
+  padding: 20px;
+  background-color: #ddd;
+  position: fixed;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1000;
 }
 
+.btnCerrar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  border: none;
+}
+
+/*---------------------------------------------------------------
+TAMAÑO MOBILE
+---------------------------------------------------------------*/
 @media (max-width: 600px) {
-  select {
+
+  .selectorCategorias {
     border: 1px solid black;
     border-radius: 0;
     color: black;
     font-weight: 600;
+    width: 140px;
   }
 
-  .modal{
-    width:fit-content;
-    position: fixed;
-    border: 1px solid silver;
-    border-radius: 10px;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  .contenedorGeneral{
+    width: 95%;
   }
-
-  .btnCerrar{
-    position: absolute;
-    top: 0;
-    right:0;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    background: transparent;
-    border: none;
-  }
-
-
-
-
-
-
-
-
-
 
 }
