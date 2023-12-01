@@ -1,6 +1,17 @@
 {
   "data": [
     {
+      "titulo": "Flujo de Trabajo",
+      "pasos": [
+        "1- git init (Crea repo local)",
+        "2- git add . (Guarda Cambios en Stage)",
+        "3- git commit (Registra Cambios Locales)",
+        "4- git push (Sube Cambios a Repo Remoto)",
+        "5- git pull (Trae cambios de Repo Remoto)"
+      ]
+    },
+
+    {
       "titulo": "Cambiar mensaje último commit",
       "pasos": [
         "1- git commit --amend",
@@ -11,18 +22,8 @@
         "6- git log --oneline (verificar cambio local)",
         "7- git push -f (Cambio remoto forzado)"
       ]
-    },
-
-    {
-      "titulo": "Flujo de Trabajo",
-      "pasos": [
-        "1- git init (Crea repo local)",
-        "2- git add . (Guarda Cambios en Stage)",
-        "3- git commit (Registra Cambios Locales)",
-        "4- git push (Sube Cambios a Repo Remoto)",
-        "5- git pull (Trae cambios de Repo Remoto)"
-      ]
     }
+
 
 
 

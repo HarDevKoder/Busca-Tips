@@ -44,7 +44,11 @@ export const origenCargaPagina = () => {
 // Ventana Modal para Mostrar Tips
 // -----------------------------------------------------------------------
 export const customAlert = (tip) => {
-  // Venana modal contenedora
+  // creo el overlay y la clase para darle estilos por aparte
+  let overlay = document.createElement('div');
+  overlay.classList.add('overlay');
+
+  // Ventana modal
   let modal = document.createElement("div");
   modal.classList.add("modal");
 
@@ -58,11 +62,13 @@ export const customAlert = (tip) => {
   btnCerrar.textContent = "X";
   btnCerrar.addEventListener("click", () => {
     modal.remove();
+    overlay.remove();
+
   });
 
   // Agrego elementos a ventana modal
   modal.append(text, btnCerrar);
 
-  // Agrego ventana modal al body de la página
-  document.body.appendChild(modal);
+  // Agrego ventana modal y overlay al body de la página
+  document.body.append(overlay, modal);
 };
