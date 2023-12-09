@@ -71,8 +71,13 @@ body {
 }
 
 .selectorCategorias {
+  width: 140px;
   height: 25px;
   background-color: #e7e7e7;
+  border: 1px solid #e7e7e7;
+  border-radius: 5px;
+  color: black;
+  font-weight: 500;
 }
 
 .contenedorResultados {
@@ -137,13 +142,13 @@ MEDIA QUERIES PARA RESPONSIVE A DIFERENTES PANTALLAS
   .contenedorGeneral {
     width: 50%;
   }
-    .selectorCategorias {
+  /* .selectorCategorias {
     border: 1px solid black;
     border-radius: 0;
     color: black;
     font-weight: 600;
     width: 140px;
-  }
+  } */
 }
 
 /* Tamaño para tablets */
@@ -152,28 +157,26 @@ MEDIA QUERIES PARA RESPONSIVE A DIFERENTES PANTALLAS
     width: 60%;
   }
 
-    .selectorCategorias {
+  /* .selectorCategorias {
     border: 1px solid black;
     border-radius: 0;
     color: black;
     font-weight: 600;
     width: 140px;
-  }
+  } */
 }
 
 /* Tamaño para celulares */
 @media (max-width: 600px) {
   .contenedorGeneral {
     width: 90%;
-  }  
+  }
 
-  .selectorCategorias {
+  /* .selectorCategorias {
     border: 1px solid black;
     border-radius: 0;
     color: black;
     font-weight: 600;
     width: 140px;
-  }
+  } */
 }
-
-
