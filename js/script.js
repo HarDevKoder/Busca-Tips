@@ -4,10 +4,7 @@
 import {
   referenciarElementosDom,
   cargarArchivoCategoria,
-  extraerDatoCompletoJson,
   origenCargaPagina,
-  customAlert,
-  mostrarListadoTipsModal,
   desplegarTips,
 } from "./libreria.js";
 

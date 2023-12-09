@@ -83,7 +83,7 @@ export const mostrarListadoTipsModal = (salida) => {
   salida.data.forEach((item) => {
     let li = document.createElement("li");
     li.textContent = item.titulo;
-    li.style.cursor = "pointer";
+    li.classList.add("liTip");
     li.addEventListener("click", () => {
       let elemento = "";
       item.pasos.forEach((paso) => {
