@@ -137,6 +137,13 @@ MEDIA QUERIES PARA RESPONSIVE A DIFERENTES PANTALLAS
   .contenedorGeneral {
     width: 50%;
   }
+    .selectorCategorias {
+    border: 1px solid black;
+    border-radius: 0;
+    color: black;
+    font-weight: 600;
+    width: 140px;
+  }
 }
 
 /* Tamaño para tablets */
@@ -144,16 +151,22 @@ MEDIA QUERIES PARA RESPONSIVE A DIFERENTES PANTALLAS
   .contenedorGeneral {
     width: 60%;
   }
+
+    .selectorCategorias {
+    border: 1px solid black;
+    border-radius: 0;
+    color: black;
+    font-weight: 600;
+    width: 140px;
+  }
 }
 
 /* Tamaño para celulares */
 @media (max-width: 600px) {
   .contenedorGeneral {
     width: 90%;
-  }
-}
+  }  
 
-/* @media (max-width: 800px) {
   .selectorCategorias {
     border: 1px solid black;
     border-radius: 0;
@@ -161,5 +174,6 @@ MEDIA QUERIES PARA RESPONSIVE A DIFERENTES PANTALLAS
     font-weight: 600;
     width: 140px;
   }
+}
 
 
