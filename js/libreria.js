@@ -7,10 +7,11 @@ export const referenciarElementosDom = () => {
   const selectorCategorias = document.getElementById("selectorCategorias");
   const contenedorResultados = document.getElementById("contenedorResultados");
   const listaResultados = document.getElementById("listaResultados");
+  const contenedorLogoTech = document.getElementById("contenedorLogoTech");
 };
 
 // -----------------------------------------------------------------------
-// Mensaje de confirmación de Categoria seleccionada
+// Seleccion del archivo JSON con los tips y su logotipo
 // -----------------------------------------------------------------------
 export const cargarArchivoCategoria = () => {
   let archivoSeleccionado = selectorCategorias.value;

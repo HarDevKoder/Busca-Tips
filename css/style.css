@@ -52,8 +52,17 @@ body {
   width: 100%;
 }
 
-.fieldset > * {
-  flex: 1;
+.fieldSet > * {
+  width: fit-content;
+}
+
+.contenedorLogoTech{
+  display: inline-block;
+  width: 20%;
+}
+
+.contenedorLogoTech img{
+  width: 100%;
 }
 
 .lblLenguaje {
@@ -65,6 +74,7 @@ body {
   height: 25px;
   background-color: #e7e7e7;
 }
+
 
 .contenedorResultados {
   background-color:rgba(0, 0, 0, 0.6);

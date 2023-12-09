@@ -1,4 +1,5 @@
 {
+  "link": "imagenes/git.svg",
   "data": [
     {
       "titulo": "Flujo de Trabajo",
@@ -23,11 +24,5 @@
         "7- git push -f (Cambio remoto forzado)"
       ]
     }
-
-
-
-
-
-
   ]
 }

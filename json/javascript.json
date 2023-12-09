@@ -1,6 +1,6 @@
 {
-  "data": 
-  [
+  "link": "imagenes/javascript.svg",
+  "data": [
     { "titulo": "Array - Agregar Elemento en Posición X", "edad": 24 },
     { "titulo": "Array - Crear y Asignar Valores", "edad": 24 },
     { "titulo": "Array - Eliminar Elemento X", "edad": 24 },
@@ -13,6 +13,5 @@
     { "titulo": "Condicionales - Ternarios", "edad": 24 },
     { "titulo": "Condicionales - Switch", "edad": 24 },
     { "titulo": "Condicionales - Objeto Json", "edad": 24 }
-
   ]
 }

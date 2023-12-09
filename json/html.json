@@ -1,4 +1,5 @@
 {
+  "link": "imagenes/html5.svg",
   "data": [
     { "titulo": "Anclas", "edad": 28 },
     { "titulo": "Audio", "edad": 37 },
