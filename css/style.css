@@ -56,12 +56,12 @@ body {
   width: fit-content;
 }
 
-.contenedorLogoTech{
+.contenedorLogoTech {
   display: inline-block;
   width: 20%;
 }
 
-.contenedorLogoTech img{
+.contenedorLogoTech img {
   width: 100%;
 }
 
@@ -75,13 +75,12 @@ body {
   background-color: #e7e7e7;
 }
 
-
 .contenedorResultados {
-  background-color:rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   width: 100%;
   font-weight: 500;
   font-size: 1em;
-  color:whitesmoke ;
+  color: whitesmoke;
 }
 
 .listaResultados {
@@ -102,7 +101,7 @@ body {
   z-index: 1001;
   border-radius: 8px;
   font-weight: 500;
-  color:black ;
+  color: black;
 }
 
 .btnCerrar {
@@ -131,9 +130,30 @@ body {
 }
 
 /*---------------------------------------------------------------
-TAMAÑO MOBILE
+MEDIA QUERIES PARA RESPONSIVE A DIFERENTES PANTALLAS
 ---------------------------------------------------------------*/
+/* Tamaño para laptops */
+@media (max-width: 992px) {
+  .contenedorGeneral {
+    width: 50%;
+  }
+}
+
+/* Tamaño para tablets */
+@media (max-width: 768px) {
+  .contenedorGeneral {
+    width: 60%;
+  }
+}
+
+/* Tamaño para celulares */
 @media (max-width: 600px) {
+  .contenedorGeneral {
+    width: 90%;
+  }
+}
+
+/* @media (max-width: 800px) {
   .selectorCategorias {
     border: 1px solid black;
     border-radius: 0;
@@ -142,7 +162,4 @@ TAMAÑO MOBILE
     width: 140px;
   }
 
-  .contenedorGeneral {
-    width: 90%;
-  }
-}
+

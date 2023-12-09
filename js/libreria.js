@@ -4,17 +4,19 @@
 // Referencias de elementos del DOM
 // -----------------------------------------------------------------------
 export const referenciarElementosDom = () => {
-  const selectorCategorias = document.getElementById("selectorCategorias");
-  const contenedorResultados = document.getElementById("contenedorResultados");
-  const listaResultados = document.getElementById("listaResultados");
-  const contenedorLogoTech = document.getElementById("contenedorLogoTech");
+  return {
+    selectorCategorias: document.querySelector("#selectorCategorias"),
+    contenedorResultados: document.querySelector("#contenedorResultados"),
+    listaResultados: document.querySelector("#listaResultados"),
+    contenedorLogoTech: document.querySelector("#contenedorLogoTech"),
+  };
 };
 
 // -----------------------------------------------------------------------
-// Seleccion del archivo JSON con los tips y su logotipo
+// Selecciona el archivo JSON de acuerdo a la opcion elegida en el select
 // -----------------------------------------------------------------------
 export const cargarArchivoCategoria = () => {
-  let archivoSeleccionado = selectorCategorias.value;
+  const archivoSeleccionado = selectorCategorias.value;
   return archivoSeleccionado;
 };
 
@@ -33,8 +35,8 @@ export const extraerDatoCompletoJson = (url, callback) => {
 // Determino el origen de la carga de la pagina
 // -----------------------------------------------------------------------
 export const origenCargaPagina = () => {
-  var entries = performance.getEntriesByType("navigation");
-  if (entries[0].type === "back_forward") {
+  const entries = performance.getEntriesByType("navigation");
+  if (entries[0]?.type === "back_forward") {
     // La página fue navegada a través del botón de adelante o atrás
     // Refrescar la página
     document.location.reload();
@@ -46,8 +48,8 @@ export const origenCargaPagina = () => {
 // -----------------------------------------------------------------------
 export const customAlert = (tip) => {
   // creo el overlay y la clase para darle estilos por aparte
-  let overlay = document.createElement('div');
-  overlay.classList.add('overlay');
+  let overlay = document.createElement("div");
+  overlay.classList.add("overlay");
 
   // Ventana modal
   let modal = document.createElement("div");
@@ -56,7 +58,7 @@ export const customAlert = (tip) => {
   // Parrafo para escribir el Tip
   let text = document.createElement("p");
   text.innerText = tip;
-  
+
   // Boton de cierre de ventana Modal
   let btnCerrar = document.createElement("button");
   btnCerrar.classList.add("btnCerrar");
@@ -64,7 +66,6 @@ export const customAlert = (tip) => {
   btnCerrar.addEventListener("click", () => {
     modal.remove();
     overlay.remove();
-
   });
 
   // Agrego elementos a ventana modal
