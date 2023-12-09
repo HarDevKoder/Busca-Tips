@@ -147,13 +147,13 @@ MEDIA QUERIES PARA RESPONSIVE A DIFERENTES PANTALLAS
 /* Tamaño para tablets */
 @media (max-width: 768px) {
   .contenedorGeneral {
-    width: 60%;
+    width: 70%;
   }
 }
 
 /* Tamaño para celulares */
 @media (max-width: 600px) {
   .contenedorGeneral {
-    width: 90%;
+    width: 95%;
   }
 }
