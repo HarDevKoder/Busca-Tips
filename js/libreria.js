@@ -74,3 +74,39 @@ export const customAlert = (tip) => {
   // Agrego ventana modal y overlay al body de la página
   document.body.append(overlay, modal);
 };
+
+// -----------------------------------------------------------------------
+// Extracción de datos de JSON y mstrarlos como elementos de lista (li)
+// Se muestra modal con el contenido del tip
+// -----------------------------------------------------------------------
+export const mostrarListadoTipsModal = (salida) => {
+  salida.data.forEach((item) => {
+    let li = document.createElement("li");
+    li.textContent = item.titulo;
+    li.style.cursor = "pointer";
+    li.addEventListener("click", () => {
+      let elemento = "";
+      item.pasos.forEach((paso) => {
+        elemento += paso + "\n";
+      });
+      customAlert(elemento);
+    });
+    listaResultados.appendChild(li);
+  });
+};
+
+// -----------------------------------------------------------------------
+// Realiza acciones de acuerdo al JSON seleccionado
+// -----------------------------------------------------------------------
+export const desplegarTips = (archivoSeleccionado) => {
+  if (archivoSeleccionado === "json/Seleccionar.json") {
+    listaResultados.style.display = "none";
+    contenedorLogoTech.src = "imagenes/programacion.svg";
+  } else {
+    extraerDatoCompletoJson(archivoSeleccionado, (salida) => {
+      listaResultados.style.display = "block";
+      contenedorLogoTech.src = salida.link;
+      mostrarListadoTipsModal(salida);
+    });
+  }
+};
