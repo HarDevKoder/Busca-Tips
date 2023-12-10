@@ -82,7 +82,6 @@ body {
 }
 
 .contenedorResultados {
-  background-color: rgba(0, 0, 0, 0.6);
   width: 100%;
   font-weight: 500;
   font-size: 1em;
@@ -98,8 +97,13 @@ body {
 
 .liTip {
   cursor: pointer;
-  border-bottom: 1px solid silver;
-  padding: 10px 0;
+  padding: 10px 0 10px 10px;
+  border: 1px solid gray;
+  background: azure;
+  color: black;
+  margin-bottom: 3px;
+  border-radius: 5px;
+  box-shadow: 0 0 3px black;
 }
 
 .modal {
@@ -161,20 +165,10 @@ MEDIA QUERIES PARA RESPONSIVE A DIFERENTES PANTALLAS
 /* Tamaño para celulares */
 @media (max-width: 600px) {
   .contenedorGeneral {
-    width: 90%;
+    width: 95%;
   }
 
   .modal {
     width: 98%;
-    padding: 20px;
-    background-color: white;
-    position: fixed;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1001;
-    border-radius: 8px;
-    font-weight: 500;
-    color: black;
   }
 }
