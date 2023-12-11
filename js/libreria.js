@@ -9,6 +9,7 @@ export const referenciarElementosDom = () => {
     contenedorResultados: document.querySelector("#contenedorResultados"),
     listaResultados: document.querySelector("#listaResultados"),
     contenedorLogoTech: document.querySelector("#contenedorLogoTech"),
+    inputBusqueda: document.querySelector("#inputBusqueda"),
   };
 };
 
@@ -76,22 +77,25 @@ export const customAlert = (tip) => {
 };
 
 // -----------------------------------------------------------------------
-// Extracción de datos de JSON y mstrarlos como elementos de lista (li)
+// Extracción de items de JSON mostrandolos como elementos de lista (li)
 // Se muestra modal con el contenido del tip
 // -----------------------------------------------------------------------
-export const mostrarListadoTipsModal = (salida) => {
+export const mostrarListadoTips = (salida) => {
+  listaResultados.innerHTML = ""; // Limpiar la lista antes de agregar nuevos elementos
   salida.data.forEach((item) => {
-    let li = document.createElement("li");
-    li.textContent = item.titulo;
-    li.classList.add("liTip");
-    li.addEventListener("click", () => {
-      let elemento = "";
-      item.pasos.forEach((paso) => {
-        elemento += paso + "\n";
+    if (item.titulo.startsWith(inputBusqueda.value.toUpperCase())) {
+      let li = document.createElement("li");
+      li.classList.add("liTip");
+      li.textContent = item.titulo;
+      li.addEventListener("click", () => {
+        let elemento = "";
+        item.pasos.forEach((paso) => {
+          elemento += paso + "\n";
+        });
+        customAlert(elemento);
       });
-      customAlert(elemento);
-    });
-    listaResultados.appendChild(li);
+      listaResultados.appendChild(li);
+    }
   });
 };
 
@@ -106,7 +110,12 @@ export const desplegarTips = (archivoSeleccionado) => {
     extraerDatoCompletoJson(archivoSeleccionado, (salida) => {
       listaResultados.style.display = "block";
       contenedorLogoTech.src = salida.link;
-      mostrarListadoTipsModal(salida);
+
+      inputBusqueda.addEventListener("input", () => {
+        mostrarListadoTips(salida);
+      });
+
+      mostrarListadoTips(salida);
     });
   }
 };

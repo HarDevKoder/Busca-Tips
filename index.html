@@ -18,19 +18,25 @@
 
         <legend class="legend">HarDevTips</legend>
 
-        <p class="lblLenguaje">Categoría: </p>
-        <select id="selectorCategorias" class="selectorCategorias">
-          <option value="json/Seleccionar.json">Seleccionar</option>
-          <option value="json/git.json">Git</option>
-          <option value="json/html.json">Html</option>
-          <option value="json/css.json">Css</option>
-          <option value="json/javascript.json">JavaScript</option>
-        </select>
+        <div class="contenedorCategorias">
 
-        <div class="contenedorLogoTech" >
-          <img src="" id="contenedorLogoTech" alt="">
-        </div>
+          <div class="contenedorLogoTech">
+            <img src="" id="contenedorLogoTech" alt="">
+          </div>
+
+          <select id="selectorCategorias" class="selectorCategorias">
+            <option value="json/Seleccionar.json">Seleccionar</option>
+            <option value="json/git.json">Git</option>
+            <option value="json/html.json">Html</option>
+            <option value="json/css.json">Css</option>
+            <option value="json/javascript.json">JavaScript</option>
+          </select>
           
+        </div>
+
+        <input type="text" id="inputBusqueda" class="inputBusqueda" placeholder="Buscar">
+
+
       </fieldset>
 
       <div class="contenedorResultados" id="contenedorResultados">
