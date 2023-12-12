@@ -10,16 +10,16 @@ html {
 }
 body {
   font-size: 1em;
-}
-.fullContainer {
-  width: 100%;
-  height: auto;
-  min-height: 100vh;
   background-image: url("/imagenes/fondo.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding-top: 30px;
+  background-attachment: fixed;
+}
+.fullContainer {
+  width: auto;
+  height: auto;
+  min-height: 100vh;
 }
 .contenedorGeneral {
   width: 40%;
