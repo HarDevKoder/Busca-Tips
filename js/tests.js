@@ -1,20 +1,16 @@
-export const desplegarTips = (archivoSeleccionado) => {
-  if (archivoSeleccionado === "json/Seleccionar.json") {
-    listaResultados.style.display = "none";
-    contenedorLogoTech.src = "imagenes/programacion.svg";
-  } else {
-    extraerDatoCompletoJson(archivoSeleccionado, (salida) => {
-      listaResultados.style.display = "block";
-      contenedorLogoTech.src = salida.link;
-
-      inputBusqueda.addEventListener("input", () => {
-        let filtrado = salida.data.filter((item) =>
-          item.titulo.includes(inputBusqueda.value.toUpperCase().trim())
-        );
-        mostrarListadoTips({ ...salida, data: filtrado });
+export const mostrarListadoTips = (salida) => {
+  listaResultados.innerHTML = "";
+  salida.data.forEach((item) => {
+    let li = document.createElement("li");
+    li.classList.add("liTip");
+    li.textContent = item.titulo;
+    li.addEventListener("click", () => {
+      let elemento = "";
+      item.pasos.forEach((paso) => {
+        elemento += paso + "\n";
       });
-
-      mostrarListadoTips(salida);
+      customAlert(elemento);
     });
-  }
+    listaResultados.appendChild(li);
+  });
 };

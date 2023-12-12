@@ -14,14 +14,6 @@ export const referenciarElementosDom = () => {
 };
 
 // -----------------------------------------------------------------------
-// Selecciona el archivo JSON de acuerdo a la opcion elegida en el select
-// -----------------------------------------------------------------------
-export const cargarArchivoCategoria = () => {
-  const archivoSeleccionado = selectorCategorias.value;
-  return archivoSeleccionado;
-};
-
-// -----------------------------------------------------------------------
 // Extraccion de los valores completos del JSON selecionado
 // -----------------------------------------------------------------------
 export const extraerDatoCompletoJson = (url, callback) => {
@@ -77,30 +69,51 @@ export const customAlert = (tip) => {
 };
 
 // -----------------------------------------------------------------------
-// Extracción de items de JSON mostrandolos como elementos de lista (li)
-// Se muestra modal con el contenido del tip
+// Genera elemento de lista y muestra modal con el tip
 // -----------------------------------------------------------------------
-export const mostrarListadoTips = (salida) => {
-  listaResultados.innerHTML = ""; // Limpiar la lista antes de agregar nuevos elementos
+const generarElementoLista = (item) => {
+  let li = document.createElement("li");
+  li.classList.add("liTip");
+  li.textContent = item.titulo;
+
+  li.addEventListener("click", () => {
+    let elemento = "";
+    item.pasos.forEach((paso) => {
+      elemento += paso + "\n";
+    });
+    customAlert(elemento);
+  });
+
+  listaResultados.appendChild(li);
+};
+
+
+// -----------------------------------------------------------------------
+// Busqueda general de todos los tips (Select por default)
+// -----------------------------------------------------------------------
+export const busquedaTotal = (salida) => {
+  listaResultados.innerHTML = "";
   salida.data.forEach((item) => {
-    if (item.titulo.startsWith(inputBusqueda.value.toUpperCase())) {
-      let li = document.createElement("li");
-      li.classList.add("liTip");
-      li.textContent = item.titulo;
-      li.addEventListener("click", () => {
-        let elemento = "";
-        item.pasos.forEach((paso) => {
-          elemento += paso + "\n";
-        });
-        customAlert(elemento);
-      });
-      listaResultados.appendChild(li);
+    generarElementoLista(item);
+  });
+};
+
+// -----------------------------------------------------------------------
+// Busqueda filtrada (texto del input)
+// -----------------------------------------------------------------------
+const busquedaFiltrada = (salida) => {
+  listaResultados.innerHTML = "";
+  let textoInput = inputBusqueda.value.toLowerCase();
+  salida.data.forEach((item) => {
+    let li = document.createElement("li");
+    if (item.titulo.toLowerCase().includes(textoInput)) {
+      generarElementoLista(item);
     }
   });
 };
 
 // -----------------------------------------------------------------------
-// Realiza acciones de acuerdo al JSON seleccionado
+// Muestra los items de la categoria seleccionada
 // -----------------------------------------------------------------------
 export const desplegarTips = (archivoSeleccionado) => {
   if (archivoSeleccionado === "json/Seleccionar.json") {
@@ -110,12 +123,11 @@ export const desplegarTips = (archivoSeleccionado) => {
     extraerDatoCompletoJson(archivoSeleccionado, (salida) => {
       listaResultados.style.display = "block";
       contenedorLogoTech.src = salida.link;
-
-      inputBusqueda.addEventListener("input", () => {
-        mostrarListadoTips(salida);
+      busquedaTotal(salida);
+      inputBusqueda.addEventListener("input", ()=>{
+        busquedaFiltrada(salida);
       });
-
-      mostrarListadoTips(salida);
     });
   }
 };
+
