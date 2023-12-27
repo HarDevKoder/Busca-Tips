@@ -64,12 +64,12 @@
       "pasos": [
         "Win R",
         "netplwiz",
-        "Opciones avanzadas",
+        "Pestaña Opciones avanzadas",
         "Administración avanzada usuarios",
         "Opciones avanzadas",
-        "Carpeta usuarios derecha",
-        "Clic sobre nombre y cambiar",
-        "Clic sobre nombre completo y cambiar",
+        "Doble clic carpeta usuarios derecha",
+        "Doble clic sobre nombre y cambiar",
+        "Aceptar",
         "Cerrar ventanas",
         "Reiniciar equipo"
       ]
@@ -86,6 +86,103 @@
 
         "MÁXIMA CAPACIDAD Y NUMERO DE SLOTS DE RAM",
         "• wmic memphysical get MaxCapacity, MemoryDevices"
+      ]
+    },
+
+    {
+      "titulo": "CheckDisk con Hiren's Boot",
+      "pasos": [
+        "Bootear desde Hirens Boot CD",
+        "Start boot CD, next",
+        "Ntfs, Ext2fs, Ext3fs ...",
+        "Ntfs Dos Pro 5.0",
+        "Esperar que cargue",
+        "Esperar que termine el proceso",
+        "Reiniciar"
+      ]
+    },
+
+    {
+      "titulo": "Conversion MBR-GPT",
+      "pasos": [
+        "Iniciar formateo",
+        "Al llegar a las particiones ...",
+        "Presionar Shift+f10 (cmd)",
+        "• diskpart",
+        "• list disk",
+        "• select disk x",
+        "• clean",
+        "• convert gpt (para pasar de mbr a gpt)",
+        "• convert mbr (para pasar de gpt a mbr)",
+        "• No digitar clean para conservar datos",
+        "• exit"
+      ]
+    },
+
+    {
+      "titulo": "Crear red Windows",
+      "pasos": [
+        "• win + R",
+        "• sysdm.cpl",
+        "• Nombre de equipo, cambiar",
+        "• Asignar grupo de trabajo (DEVNET)",
+        "• Aceptar Cambios",
+        "• Reiniciar equipo\n",
+        "• clic sobre icono de red",
+        "• Clic derecho sobre la red conectada",
+        "• Propiedades",
+        "• Colocar red en privada\n",
+        "• win + R",
+        "• Control",
+        "• Redes y recursos compartidos",
+        "• Cambiar configuración de uso compartido avanzado",
+        "• Privado",
+        "• Activar detección de redes",
+        "• Activar uso compartido de archivos e impresoras",
+        "•• Público",
+        "••• Activar detección de redes",
+        "••• Activar uso compartido de archivos e impresoras",
+        "•• Todas las Redes",
+        "••• Activar todas la opciones",
+        "•• Desactivar uso compartido con protección por contraseña",
+        "• Guardar cambios",
+        "• Compartir carpeta y asignar permisos"
+      ]
+    },
+
+    {
+      "titulo": "Eliminar ancho de banda reservado",
+      "pasos": [
+        "• Win + R",
+        "• gpedit.msc",
+        "• Configuración del equipo",
+        "• Plantillas administrativas",
+        "• Red",
+        "• Programador de paquetes QoS",
+        "• Limitar ancho de banda reservable",
+        "• Habilitar",
+        "• Aparece 80%",
+        "• Colocar 0%",
+        "• Aplicar, Aceptar"
+      ]
+    },
+
+    {
+      "titulo": "Eliminar partición dinámica",
+      "pasos": [
+        "• Iniciar la instalación como de costumbre",
+        "• Al llegar a las particiones",
+        "• Presionar shift + F10 para abrir el CMD",
+        "• Diskpart",
+        "• List Disk",
+        "• Select Disk xxx (numero del disco duro)",
+        "• Clean",
+        "• Create partition primary",
+        "• Active",
+        "• Format fs=ntfs quick",
+        "• Exit",
+        "• Ejecutar de nuevo el instalador de windows",
+        "• Configurar particiones."
       ]
     }
   ]
