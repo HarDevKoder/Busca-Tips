@@ -5,9 +5,9 @@
       "titulo": "Activar por 30 dias Windows XP",
       "pasos": [
         "Bootear en Modo Seguro con Símbolo de Sistema",
-	      "Ejecutar los comandos:",
-	      "• regsvr32 regwizc.dll",
-	      "• regsvr32 licdll.dll",
+        "Ejecutar los comandos:",
+        "• regsvr32 regwizc.dll",
+        "• regsvr32 licdll.dll",
         "• rundll32.exe syssetup,SetupOobeBnk",
         "Reiniciar el equipo"
       ]
@@ -42,6 +42,50 @@
         "Todos los programas",
         "Activar windows",
         "Windows ya está activado, clic para salir"
+      ]
+    },
+
+    {
+      "titulo": "Cambiar Icono Memoria USB",
+      "pasos": [
+        "Abrir un bloc de notas y escribir\n",
+        "• [AutoRun]",
+        "• OPEN=ARCHIVO.EXE",
+        "• Icon=NombreIcono.ico",
+        "• Label=NorfiPC\n",
+        "Guardar en la usb como: autorun.inf",
+        "Guardar el archivo.ico en la USB",
+        "Para mayor comodidad puedes ocultarlos"
+      ]
+    },
+
+    {
+      "titulo": "Cambiar Nombre Usuario Windows",
+      "pasos": [
+        "Win R",
+        "netplwiz",
+        "Opciones avanzadas",
+        "Administración avanzada usuarios",
+        "Opciones avanzadas",
+        "Carpeta usuarios derecha",
+        "Clic sobre nombre y cambiar",
+        "Clic sobre nombre completo y cambiar",
+        "Cerrar ventanas",
+        "Reiniciar equipo"
+      ]
+    },
+
+    {
+      "titulo": "Caracteristicas de PC con CMD",
+      "pasos": [
+        "REFERENCIA  PLACA BASE",
+        "• wmic baseboard get product,Manufacturer,version,serialnumber\n",
+
+        "VELOCIDAD MEMORIA RAM INSTALADA",
+        "• wmic memorychip get devicelocator, speed\n",
+
+        "MÁXIMA CAPACIDAD Y NUMERO DE SLOTS DE RAM",
+        "• wmic memphysical get MaxCapacity, MemoryDevices"
       ]
     }
   ]
