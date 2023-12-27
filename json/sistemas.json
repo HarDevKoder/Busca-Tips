@@ -1,0 +1,48 @@
+{
+  "link": "imagenes/pc.png",
+  "data": [
+    {
+      "titulo": "Activar por 30 dias Windows XP",
+      "pasos": [
+        "Bootear en Modo Seguro con Símbolo de Sistema",
+	      "Ejecutar los comandos:",
+	      "• regsvr32 regwizc.dll",
+	      "• regsvr32 licdll.dll",
+        "• rundll32.exe syssetup,SetupOobeBnk",
+        "Reiniciar el equipo"
+      ]
+    },
+
+    {
+      "titulo": "Activación permanente Windows XP",
+      "pasos": [
+        "Ingresar alguno de estos seriales",
+        "• PM732-VDYT8-27YHH-QMMB7-CXPYW",
+        "• JD3T2-QH36R-X7W2W-7R3XT-DVRPQ",
+        "• PM732-VDYT8-27YHH-QMMB7-CXPYW",
+        "win + R",
+        "regedit",
+        "• HKEY_LOCAL_MACHINE",
+        "• SOFTWARE",
+        "• Microsoft",
+        "• Windows NT",
+        "• CurrentVersion",
+        "• WPAEvents",
+        "• OOBETimer",
+        "Borrar todos los valores excepto los 4 ceros iniciales, aceptar",
+        "Abrir el archivo de nuevo y pegar:",
+        "• FF D5 71 D6 8B 6A 8D 6F D5 33 93 FD",
+        "Aceptar",
+        "Clic derecho sobre la carpeta wpa, permisos",
+        "SYSTEM (usuario)",
+        "Seleccionar casillas denegar",
+        "Aceptar",
+        "Cerrar el editor de registro",
+        "Inicio",
+        "Todos los programas",
+        "Activar windows",
+        "Windows ya está activado, clic para salir"
+      ]
+    }
+  ]
+}
