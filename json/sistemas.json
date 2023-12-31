@@ -12,7 +12,6 @@
         "Reiniciar el equipo"
       ]
     },
-
     {
       "titulo": "Activación permanente Windows XP",
       "pasos": [
@@ -44,7 +43,6 @@
         "Windows ya está activado, clic para salir"
       ]
     },
-
     {
       "titulo": "Cambiar Icono Memoria USB",
       "pasos": [
@@ -58,7 +56,6 @@
         "Para mayor comodidad puedes ocultarlos"
       ]
     },
-
     {
       "titulo": "Cambiar Nombre Usuario Windows",
       "pasos": [
@@ -74,21 +71,17 @@
         "Reiniciar equipo"
       ]
     },
-
     {
       "titulo": "Caracteristicas de PC con CMD",
       "pasos": [
         "REFERENCIA  PLACA BASE",
         "• wmic baseboard get product,Manufacturer,version,serialnumber\n",
-
         "VELOCIDAD MEMORIA RAM INSTALADA",
         "• wmic memorychip get devicelocator, speed\n",
-
         "MÁXIMA CAPACIDAD Y NUMERO DE SLOTS DE RAM",
         "• wmic memphysical get MaxCapacity, MemoryDevices"
       ]
     },
-
     {
       "titulo": "CheckDisk con Hiren's Boot",
       "pasos": [
@@ -101,7 +94,6 @@
         "Reiniciar"
       ]
     },
-
     {
       "titulo": "Conversion MBR-GPT",
       "pasos": [
@@ -118,7 +110,6 @@
         "• exit"
       ]
     },
-
     {
       "titulo": "Crear red Windows",
       "pasos": [
@@ -149,7 +140,6 @@
         "• Compartir carpeta y asignar permisos"
       ]
     },
-
     {
       "titulo": "Eliminar ancho de banda reservado",
       "pasos": [
@@ -166,7 +156,6 @@
         "• Aplicar, Aceptar"
       ]
     },
-
     {
       "titulo": "Eliminar partición dinámica",
       "pasos": [
@@ -184,6 +173,128 @@
         "• Ejecutar de nuevo el instalador de windows",
         "• Configurar particiones."
       ]
-    }
+    },
+    {
+      "titulo": "Eliminar protección contra escritura",
+      "pasos": [
+        "• Win + R",
+        "• cmd",
+        "• diskpart",
+        "• list volume",
+        "• select volume x",
+        "• attribute volume",
+        "• attrib disk clear readonly",
+        "• enter"
+      ]
+    },
+    {
+      "titulo": "Eliminar protección GPT",
+      "pasos": [
+        "• Iniciar la instalación como de costumbre",
+        "• al llegar a las particiones",
+        "• presionar shift + F10 para abrir una ventana de comandos",
+        "• Diskpart",
+        "• List Disk",
+        "• Select Disk xxx (número del disco duro)",
+        "• Clean",
+        "• create partition primary",
+        "• active",
+        "• format fs=ntfs quick",
+        "• Entrar al setup para activar el booteo legacy."
+      ]
+    },
+    {
+      "titulo": "Habilitar/Deshabilitar WiFi Laptop",
+      "pasos": [
+        "• Abrir cmd como administrador",
+        "• netsh interface show interface → adaptadores de red",
+        "• netsh interface set interface “Wi-Fi” disabled  → Deshabilitar",
+        "• netsh interface set interface “Wi-Fi” enable → Habilitar "
+      ]
+    },
+    {
+      "titulo": "Habilitar/Deshabilitar modo prueba Win 10",
+      "pasos": [
+        "• Abrir cmd como administrador\n",
+        "ACTIVAR",
+        "• Bcdedit.exe -set TESTSIGNING ON\n",
+        "DESACTIVAR",
+        "• Bcdedit.exe -set TESTSIGNING OFF\n",
+        "Reiniciar para aplicar cambios"
+      ]
+    },
+    {
+      "titulo": "Quitar clave de BIOS",
+      "pasos": [
+        "• Digitar varias claves inválidas",
+        "• Sistema bloqueado y da una clave",
+        "• Pegarla la página de generar claves de bios",
+        "• Generar clave",
+        "• Apagar equipo y entrar de nuevo al Bios setup",
+        "• Digitar clave generada",
+        "• Debería entrar sin problemas"
+      ]
+    },
+    {
+      "titulo": "Quitar flechas de acceso directo",
+      "pasos": [
+        "• Abrir ventana ejecutar (Win+R)",
+        "• Regedit, enter",
+        "• Hkey_Classes_Root",
+        "• Presionar tecla L",
+        "• Seleccionar lnkFile",
+        "• Borrar Archivo IsShortcut",
+        "• Reiniciar Equipo"
+      ]
+    },
+    {
+      "titulo": "Reparar accesos directos Adobe Reader",
+      "pasos": [
+        "• Ejecutar el archivo FixLNKEXE.reg",
+        "• Listo, problema resuelto"
+      ]
+    },
+    {
+      "titulo": "Recuperar iconos de escritorio",
+      "pasos": [
+        "• Activar ver carpetas ocultas",
+        "• Win + R",
+        "• %appdata%, enter",
+        "• Se entra a roaming directamente",
+        "• Devolverse a AppData",
+        "• Local",
+        "• Borrar archivo IconCache",
+        "• Abrir administrador de tareas",
+        "• Terminar proceso explorer.exe",
+        "• Pestaña archivo",
+        "• Crear nueva tarea",
+        "• explorer.exe",
+        "• Aceptar",
+        "• Salir",
+        "• Listo, iconos recuperados!!"
+      ]
+    },
+    {
+      "titulo": "Saltar WIFI Windows 11",
+      "pasos": [
+        "• Shift + F10",
+        "• oobe\\bypassnro"
+      ]
+    },
+      {
+        "titulo": "Tipo de disco",
+        "pasos": [
+          "• Win + R",
+          "• dfrgui ",
+          "• Se listan los discos y su tipo"
+        ]
+      },
+      {
+        "titulo": "Verificar licencia de Windows",
+        "pasos": [
+          "• Abrir CMD",
+          "• slmgr -xpr"
+        ]
+      }
   ]
 }
