@@ -8,31 +8,27 @@
 html {
   font-family: miFuente;
 }
+
 body {
   font-size: 1em;
-  background-image: url("/imagenes/fondo.webp");
-  background-size: cover;
-  background-position: center;
+  background-image: url("../imagenes/fondo.webp");
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
   background-attachment: fixed;
 }
-.fullContainer {
-  width: auto;
-  height: auto;
-  min-height: 100vh;
-}
+
 .contenedorGeneral {
   width: 40%;
   height: auto;
   border: 1px solid silver;
-  margin: 0 auto;
+  margin: 5px auto;
   display: grid;
   place-items: center;
   gap: 15px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3), 3px 0px 3px rgba(0, 0, 0, 0.3);
-  padding: 10px;
   color: azure;
 }
 
@@ -50,16 +46,17 @@ body {
   align-items: center;
   gap: 10px;
   border-radius: 5px;
-  width: 100%;
+  width: 90%;
+  margin-top: 10px;
 }
 
-.contenedorCategorias{
+.contenedorCategorias {
   display: flex;
   align-items: center;
   gap: 2px;
 }
 
-.inputBusqueda{
+.inputBusqueda {
   width: 60%;
 }
 
@@ -86,10 +83,9 @@ body {
   font-weight: 500;
 }
 
-.inputBusqueda{
+.inputBusqueda {
   border-radius: 5px;
   height: 28px;
-  
 }
 
 .contenedorResultados {
@@ -175,15 +171,19 @@ MEDIA QUERIES PARA RESPONSIVE A DIFERENTES PANTALLAS
 
 /* Tamaño para celulares */
 @media (max-width: 600px) {
+  body {
+  background-size:cover;
+}
+
   .contenedorGeneral {
     width: 95%;
   }
 
-  .selectorCategorias{
+  .selectorCategorias {
     width: 80%;
   }
 
   .modal {
-    width: 98%;
+    width: 93%;
   }
 }
