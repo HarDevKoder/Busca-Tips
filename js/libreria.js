@@ -1,6 +1,18 @@
 // -----------------------------------------------------------------------
 // LIBRERIA DE FUNCIONES A UTILIZAR EN EL PROYECTO
 // -----------------------------------------------------------------------
+// Comprobación e Compatibilidad con ervice Worker (PWA)
+// -----------------------------------------------------------------------
+export const verificarServiceWorker = () => {
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker
+      .register("./sw.js")
+      .then((reg) => console.log("Registro de SW exitoso", reg))
+      .catch((err) => console.warn("Error al tratar de registrar el sw", err));
+  }
+};
+
+// -----------------------------------------------------------------------
 // Referencias de elementos del DOM
 // -----------------------------------------------------------------------
 export const referenciarElementosDom = () => {
@@ -87,7 +99,6 @@ const generarElementoLista = (item) => {
   listaResultados.appendChild(li);
 };
 
-
 // -----------------------------------------------------------------------
 // Busqueda general de todos los tips (Select por default)
 // -----------------------------------------------------------------------
@@ -124,10 +135,9 @@ export const desplegarTips = (archivoSeleccionado) => {
       listaResultados.style.display = "block";
       contenedorLogoTech.src = salida.link;
       busquedaTotal(salida);
-      inputBusqueda.addEventListener("input", ()=>{
+      inputBusqueda.addEventListener("input", () => {
         busquedaFiltrada(salida);
       });
     });
   }
 };
-

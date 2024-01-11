@@ -1,12 +1,11 @@
 // --------------------------------------------------------------
 // Importacion de Funciones
 // --------------------------------------------------------------
-import { referenciarElementosDom, desplegarTips } from "./libreria.js";
-
-// --------------------------------------------------------------
-// Origen de la carga de la pagina (inicial o retroceso)
-// --------------------------------------------------------------
-// origenCargaPagina();
+import {
+  referenciarElementosDom,
+  desplegarTips,
+  verificarServiceWorker,
+} from "./libreria.js";
 
 // --------------------------------------------------------------
 // Variables Globales
@@ -17,14 +16,8 @@ let archivoSeleccionado = "json/Seleccionar.json";
 // PROGRAMA PRINCIPAL
 // --------------------------------------------------------------
 
-// Compruebo existencia de service worker (PWA)
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker
-  .register("./sw.js")
-  .then((reg) => console.log("Registro de SW exitoso", reg))
-  .catch((err) => console.warn("Error al tratar de registrar el sw", err));
-}
-
+// Verifico en consola si el navegador soporta servuice worker
+verificarServiceWorker();
 
 // Referencio elementos del DOM
 referenciarElementosDom();
