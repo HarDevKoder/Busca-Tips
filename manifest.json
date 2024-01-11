@@ -1,7 +1,7 @@
 {
-  "name": "#HarDevTips",
-  "short_name": "#DevTips",
-  "description": "Bienvenid@s a #HarDevTips, Serie de tips acerca de temas tecnológicos y de desarrollo de software para tener siempre un asistente de cabecera :)",
+  "name": "HarDevTips",
+  "short_name": "Tips",
+  "description": "Bienvenidos a HarDevTips, Serie de tips acerca de temas tecnológicos y de desarrollo de software para tener siempre un asistente de cabecera :)",
   "background_color": "#000000",
   "theme_color": "#F0DB4F",
   "orientation": "portrait",
