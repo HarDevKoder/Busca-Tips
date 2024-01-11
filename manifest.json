@@ -3,7 +3,7 @@
   "short_name": "Tips",
   "description": "Bienvenidos a HarDevTips, Serie de tips acerca de temas tecnológicos y de desarrollo de software para tener siempre un asistente de cabecera :)",
   "background_color": "#000000",
-  "theme_color": "#F0DB4F",
+  "theme_color": "#193257",
   "orientation": "portrait",
   "display": "standalone",
   "start_url": "./?utm_source=web_app_manifest",
