@@ -37,18 +37,6 @@ export const extraerDatoCompletoJson = (url, callback) => {
 };
 
 // -----------------------------------------------------------------------
-// Determino el origen de la carga de la pagina
-// -----------------------------------------------------------------------
-export const origenCargaPagina = () => {
-  const entries = performance.getEntriesByType("navigation");
-  if (entries[0]?.type === "back_forward") {
-    // La página fue navegada a través del botón de adelante o atrás
-    // Refrescar la página
-    document.location.reload();
-  }
-};
-
-// -----------------------------------------------------------------------
 // Ventana Modal para Mostrar Tips
 // -----------------------------------------------------------------------
 export const customAlert = (tip) => {
@@ -127,9 +115,9 @@ const busquedaFiltrada = (salida) => {
 // Muestra los items de la categoria seleccionada
 // -----------------------------------------------------------------------
 export const desplegarTips = (archivoSeleccionado) => {
-  if (archivoSeleccionado === "json/Seleccionar.json") {
+  if (archivoSeleccionado === "json/seleccionar.json") {
     listaResultados.style.display = "none";
-    contenedorLogoTech.src = "imagenes/programacion.svg";
+    contenedorLogoTech.src = "imagenes/categorias/programacion.svg";
   } else {
     extraerDatoCompletoJson(archivoSeleccionado, (salida) => {
       listaResultados.style.display = "block";

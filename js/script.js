@@ -10,7 +10,7 @@ import {
 // --------------------------------------------------------------
 // Variables Globales
 // --------------------------------------------------------------
-let archivoSeleccionado = "json/Seleccionar.json";
+let archivoSeleccionado = "./json/seleccionar.json";
 
 // --------------------------------------------------------------
 // PROGRAMA PRINCIPAL
@@ -23,7 +23,7 @@ verificarServiceWorker();
 referenciarElementosDom();
 
 // Asigno logo a mostrar al cargar la pagina
-contenedorLogoTech.src = "imagenes/programacion.svg";
+contenedorLogoTech.src = "imagenes/categorias/programacion.svg";
 
 // Selecciono Archivo para extraer Tips y manipulo sus datos
 selectorCategorias.addEventListener("change", () => {
