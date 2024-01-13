@@ -3,19 +3,21 @@
 const CACHE_NAME = 'v1_cache_HarDevTips',
   urlsToCache = [
     './',
+    './index.html',
+    './fuentes/roboto.ttf',
     './css/normalize.css',
     './css/style.css',
     './js/libreria.js',
     './js/script.js',
+    './js/sw.js',
     './json/git.json',
     './json/Seleccionar.json',
     './json/sistemas.json',
-    './imagenes/Programacion.svg',
-    './imagenes/favicon.ico',
-    './imagenes/fondo.webp',
-    './imagenes/git.svg',
-    './imagenes/pc.png',
-    './imagenes/programacion.svg',
+    './imagenes/favicons/brackets.png',
+    './imagenes/fondos/fondo.webp',
+    './imagenes/categorias/programacion.svg',
+    './imagenes/categorias/sistemas.png',
+    './imagenes/categorias/git.svg'
   ]
 
 //durante la fase de instalación, generalmente se almacena en caché los activos estáticos
