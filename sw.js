@@ -18,7 +18,7 @@ const CACHE_NAME = "v1_cache_HarDevTips",
     "json/sistemas.json",
     "json/seleccionar.json",
     "manifest.json",
-    "sw.js",
+    "sw.js"
   ];
 
 //durante la fase de instalación, generalmente se almacena en caché los activos estáticos
