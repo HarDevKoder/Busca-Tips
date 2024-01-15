@@ -2,6 +2,7 @@
 <html lang="es">
 
 <head>
+
   <!-- Titulo Principal (Pestaña Browser) -->
   <title>Busca Tips</title>
 
@@ -20,44 +21,59 @@
   <link rel="shortcut icon" type="image/png" href="imagenes/favicons/brackets.png">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="apple-touch-icon" href="imagenes/pwa/Code128.png">
+
+  <!-- iPhone X (1125px x 2436px) -->
   <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px)"
-    href="imagenes/pwa/Code128.png">
+    href="imagenes/pwa/Code1024.png">
+
+  <!-- iPhone 8, 7, 6s, 6 (750px x 1334px) -->
+  <link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px)"
+    href="imagenes/pwa/Code1024.png">
+
+  <!-- iPhone 8 Plus, 7 Plus, 6s Plus, 6 Plus (1242px x 2208px) -->
+  <link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px)"
+    href="imagenes/pwa/Code1024.png">
+
+  <!-- iPhone 5 (640px x 1136px) -->
+  <link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px)"
+    href="imagenes/pwa/Code1024.png">
+
+
   <link rel="manifest" href="manifest.json">
 
 </head>
 
 <body>
-    <div class="contenedorGeneral">
+  <div class="contenedorGeneral">
 
-      <fieldset class="fieldSet" id="fieldSet">
+    <fieldset class="fieldSet" id="fieldSet">
 
-        <legend class="legend">HarDevTips</legend>
+      <legend class="legend">HarDevTips</legend>
 
-        <div class="contenedorCategorias">
+      <div class="contenedorCategorias">
 
-          <div class="contenedorLogoTech">
-            <img src="" id="contenedorLogoTech" alt="">
-          </div>
-
-          <select id="selectorCategorias" class="selectorCategorias">
-            <option value="json/seleccionar.json">Seleccionar</option>
-            <option value="json/sistemas.json">Sistemas</option>
-            <option value="json/git.json">Git</option>
-          </select>
-          
+        <div class="contenedorLogoTech">
+          <img src="" id="contenedorLogoTech" alt="">
         </div>
 
-        <input type="text" id="inputBusqueda" class="inputBusqueda" placeholder="Buscar">
+        <select id="selectorCategorias" class="selectorCategorias">
+          <option value="json/seleccionar.json">Seleccionar</option>
+          <option value="json/sistemas.json">Sistemas</option>
+          <option value="json/git.json">Git</option>
+        </select>
 
-
-      </fieldset>
-
-      <div class="contenedorResultados" id="contenedorResultados">
-        <ul class="listaResultados" id="listaResultados"></ul>
       </div>
 
+      <input type="text" id="inputBusqueda" class="inputBusqueda" placeholder="Buscar">
+
+
+    </fieldset>
+
+    <div class="contenedorResultados" id="contenedorResultados">
+      <ul class="listaResultados" id="listaResultados"></ul>
     </div>
+
+  </div>
 
   <script type="module" src="js/script.js"></script>
 </body>
