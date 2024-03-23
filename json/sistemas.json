@@ -2,6 +2,22 @@
   "link": "imagenes/categorias/sistemas.png",
   "data": [
     {
+      "titulo": "Bloquear actualización de programas",
+      "pasos": [
+        "• Windows firewall",
+        "• Configuracion avanzada",
+        "• Reglas de entrada (izquierda)",
+        "• Nueva regla (derecha)",
+        "• Programa, siguiente",
+        "• Colocar ruta del ejecutable incluido file.exe",
+        "• Siguiente",
+        "• Bloquear la conexión, siguiente",
+        "• Seleccionadas todas las opciones, siguiente",
+        "• Asignar nombre y descripción a la regla (opcional)",
+        "• Finalizar"
+      ]
+    },
+    {
       "titulo": "Activar por 30 dias Windows XP",
       "pasos": [
         "Bootear en Modo Seguro con Símbolo de Sistema",
@@ -281,20 +297,20 @@
         "• oobe\\bypassnro"
       ]
     },
-      {
-        "titulo": "Tipo de disco",
-        "pasos": [
-          "• Win + R",
-          "• dfrgui ",
-          "• Se listan los discos y su tipo"
-        ]
-      },
-      {
-        "titulo": "Verificar licencia de Windows",
-        "pasos": [
-          "• Abrir CMD",
-          "• slmgr -xpr"
-        ]
-      }
+    {
+      "titulo": "Tipo de disco",
+      "pasos": [
+        "• Win + R",
+        "• dfrgui ",
+        "• Se listan los discos y su tipo"
+      ]
+    },
+    {
+      "titulo": "Verificar licencia de Windows",
+      "pasos": [
+        "• Abrir CMD",
+        "• slmgr -xpr"
+      ]
+    }
   ]
 }
