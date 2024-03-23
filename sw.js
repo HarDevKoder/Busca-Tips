@@ -55,6 +55,14 @@ self.addEventListener("activate", (e) => {
   );
 });
 
+// Evento de para forzar la actualización de la caché
+self.addEventListener('message', function(event) {
+  if (event.data.action === 'forceUpdate') {
+    console.log('Forzando actualización de caché');
+    self.skipWaiting(); // Forzar la instalación de un nuevo Service Worker
+  }
+});
+
 self.addEventListener("fetch", (e) => {
   e.respondWith(
     caches.match(e.request).then((r) => {
