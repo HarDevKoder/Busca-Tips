@@ -19,11 +19,6 @@ let archivoSeleccionado = "./json/seleccionar.json";
 // Verifico en consola si el navegador soporta servuice worker
 verificarServiceWorker();
 
-// Envio de mensaje para forzar la actualización del caché
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.controller.postMessage({ action: "forceUpdate" });
-}
-
 // Referencio elementos del DOM
 referenciarElementosDom();
 
