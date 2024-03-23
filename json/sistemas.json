@@ -2,7 +2,7 @@
   "link": "imagenes/categorias/sistemas.png",
   "data": [
     {
-      "titulo": "Aactualización de programas",
+      "titulo": "Evitar actualización de programas",
       "pasos": [
         "• Windows firewall",
         "• Configuracion avanzada",
